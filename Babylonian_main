@@ -1,0 +1,31 @@
+def babylonian (num):
+	str_num = str(num)
+	size = len(str_num)
+	num_approx = 0
+	old_approx = 1
+	if size % 2 == 0:
+		num_approx = approx (size, num)
+	else:
+		size = size + 1
+		num_approx = approx (size, num)
+	
+	while old_approx != num_approx:
+		old_approx = num_approx
+		num_approx = (num_approx + num/num_approx)/2
+
+	return num_approx
+	
+
+def approx (size, num):
+	n = 0
+	num_approx = 0
+	if num > 225:
+		n = size // 2
+		num_approx = 7*(10**n)
+	else: 
+		num_approx = 15
+	return num_approx
+	
+num = int (input ("Insert a number to calculate its root with babylonian method: "))
+num_approx = babylonian (num)
+print ("The answer is " + str(num_approx))
