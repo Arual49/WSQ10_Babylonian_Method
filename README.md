@@ -1,0 +1,2 @@
+# WSQ10_Babylonian_Method
+Background In this assignment you will write a function to calculate the square root of a number using the Babylonian method. You can search for that method, it will be easy to find.  What to Do The function should receive a number and return floating point number. Obviously you should test your function, so create a main program that asks the user a value, calculates the square root and displays that.
